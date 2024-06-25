@@ -1,37 +1,21 @@
-# Mantine Next.js template
+# Goodwin Front-end Assignment
 
-This is a template for [Next.js](https://nextjs.org/) app router + [Mantine](https://mantine.dev/).
-If you want to use pages router instead, see [next-pages-template](https://github.com/mantinedev/next-pages-template).
+Hey there team Goodwin! Welcome to the my front-end assignment repo.
 
-## Features
+Here's some info: I used the [Mantine Next.js template](https://github.com/mantinedev/next-app-template) to get me started.
 
-This template comes with the following features:
+I've never used Mantine before. It's pretty nice, and I enjoyed it.
 
-- [PostCSS](https://postcss.org/) with [mantine-postcss-preset](https://mantine.dev/styles/postcss-preset)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Storybook](https://storybook.js.org/)
-- [Jest](https://jestjs.io/) setup with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
-- ESLint setup with [eslint-config-mantine](https://github.com/mantinedev/eslint-config-mantine)
+Feel free to ask me any questions, but I left some comments in the code explaning why I did certain things (mainly because this is an exercise).
+
+If I went forward with this: I'd create Storybook stories for the components, abstract out more reusable components, add more fallbacks, etc. There's always room to make everything better.
+
+Let me know what you think, and thanks for checking it out.
 
 ## npm scripts
-
-### Build and dev scripts
-
 - `dev` – start dev server
 - `build` – bundle application for production
 - `analyze` – analyzes application bundle with [@next/bundle-analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
-
-### Testing scripts
-
-- `typecheck` – checks TypeScript types
-- `lint` – runs ESLint
-- `prettier:check` – checks files with Prettier
-- `jest` – runs jest tests
-- `jest:watch` – starts jest watch
 - `test` – runs `jest`, `prettier:check`, `lint` and `typecheck` scripts
 
-### Other scripts
 
-- `storybook` – starts storybook dev server
-- `storybook:build` – build production storybook bundle to `storybook-static`
-- `prettier:write` – formats all files with Prettier

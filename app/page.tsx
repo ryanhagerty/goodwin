@@ -1,11 +1,19 @@
-import { Welcome } from '../components/Welcome/Welcome';
-import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
+import { Container, Title } from '@mantine/core';
+import { NewsList } from '../components/NewsList/NewsList';
 
 export default function HomePage() {
   return (
     <>
-      <Welcome />
-      <ColorSchemeToggle />
+      <Container>
+        <header>
+          <Title ta="center" mt={50} mb={30}>
+            All The News That&apos;s Fit to Fly ✈️
+          </Title>
+        </header>
+        <section>
+          <NewsList />
+        </section>
+      </Container>
     </>
   );
 }

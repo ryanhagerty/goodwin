@@ -1,0 +1,9 @@
+.container {
+  display: grid;
+
+  @media (min-width: $mantine-breakpoint-md) {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    gap: rem(20px);
+  }
+}

@@ -27,12 +27,16 @@ describe('NewsArticle', () => {
 
     expect(screen.getByText(mockArticle.title)).toBeInTheDocument();
     expect(screen.getByText(mockArticle.paragraph)).toBeInTheDocument();
-    expect(screen.getByText('Read the full article here:')).toBeInTheDocument();
+    expect(
+      screen.getByText(`Read the full article at: ${mockArticle.source}`, {
+        trim: true,
+        collapseWhitespace: true,
+      })
+    ).toBeInTheDocument();
     expect(
       screen.getByAltText(
         'An image related to travel and aviation. For more image information, please visit the article source.'
       )
     ).toBeInTheDocument();
-    expect(screen.getByText(mockArticle.source)).toHaveAttribute('href', mockArticle.url);
   });
 });

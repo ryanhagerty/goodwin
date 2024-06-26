@@ -1,4 +1,6 @@
-import { Title, Text, Image } from '@mantine/core';
+import Link from 'next/link';
+import { Title, Text, Image, Button } from '@mantine/core';
+import { IconExternalLink } from '@tabler/icons-react';
 
 declare type NewsArticleProps = {
   title: string;
@@ -46,9 +48,9 @@ export const NewsArticle: React.FC<NewsArticleProps> = ({
       <Text size="lg" mb={30}>
         {paragraph}
       </Text>
-      <Text size="md" mb={15}>
-        Read the full article here: <a href={url}>{source}</a>
-      </Text>
+      <Button size="lg" component={Link} href={url} rightSection={<IconExternalLink size={20} />}>
+        Read the full article at: {source}
+      </Button>
     </article>
   </section>
 );

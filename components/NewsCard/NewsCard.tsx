@@ -3,19 +3,7 @@
 import { useState } from 'react';
 import { Card, Image, Title, Text, Badge, Button, Modal } from '@mantine/core';
 import { NewsArticle } from '../NewsArticle/NewsArticle';
-
-declare type NewsCardProps = {
-  title: string;
-  summary: string;
-  section: string;
-  image: {
-    url: string;
-    width: number;
-  };
-  source: string;
-  url: string;
-  paragraph: string;
-};
+import { NewsCardProps } from '../types/types';
 
 export const NewsCard: React.FC<NewsCardProps> = ({
   title,
@@ -29,7 +17,7 @@ export const NewsCard: React.FC<NewsCardProps> = ({
   const [opened, setOpened] = useState(false);
 
   return (
-    <>
+    <div data-testid="news-card">
       <article style={{ width: '100%', margin: '20px auto' }}>
         <Card shadow="md" padding="lg" style={{ height: '100%' }}>
           <Card.Section mb={15}>
@@ -88,6 +76,6 @@ export const NewsCard: React.FC<NewsCardProps> = ({
       >
         <NewsArticle title={title} image={image} source={source} url={url} paragraph={paragraph} />
       </Modal>
-    </>
+    </div>
   );
 };

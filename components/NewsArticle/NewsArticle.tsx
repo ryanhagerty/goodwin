@@ -1,17 +1,7 @@
 import Link from 'next/link';
 import { Title, Text, Image, Button } from '@mantine/core';
 import { IconExternalLink } from '@tabler/icons-react';
-
-declare type NewsArticleProps = {
-  title: string;
-  image: {
-    url: string;
-    width: number;
-  };
-  source: string;
-  url: string;
-  paragraph: string;
-};
+import { NewsArticleProps } from '../types/types';
 
 export const NewsArticle: React.FC<NewsArticleProps> = ({
   title,

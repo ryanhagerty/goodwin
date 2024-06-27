@@ -5,15 +5,14 @@ import { SearchBar } from './SearchBar';
 import { SearchBarProps } from '../types/types';
 
 const mockProps: SearchBarProps = {
-  keywords: ['aviation', 'travel'],
-  setKeywords: jest.fn(),
+  loading: Boolean,
   refetch: jest.fn(),
 };
 
 describe('SearchBar component', () => {
   it('should update input value and trigger search correctly', () => {
     render(<SearchBar {...mockProps} />);
-    const input = screen.getByPlaceholderText('Search');
+    const input = screen.getByPlaceholderText('Airlines and airplanes');
     const searchButton = screen.getByText('Search');
 
     // Finds autocomplete and simulates typing
@@ -24,8 +23,7 @@ describe('SearchBar component', () => {
 
     // Finds search button and clicks
     fireEvent.click(searchButton);
-
-    expect(mockProps.setKeywords).toHaveBeenCalledWith('aviation');
+    expect(mockProps.loading).toBeTruthy();
     expect(mockProps.refetch).toHaveBeenCalled();
   });
 });

@@ -8,7 +8,7 @@ export default function HomePage() {
     <>
       <Container>
         <header>
-          <Title ta="center" mt={30} mb={50}>
+          <Title ta="center" mt={30} mb={30}>
             All The News That&apos;s Fit to Fly ✈️
           </Title>
         </header>

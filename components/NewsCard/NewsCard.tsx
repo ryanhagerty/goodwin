@@ -44,9 +44,11 @@ export const NewsCard: React.FC<NewsCardProps> = ({
               />
             )}
           </Card.Section>
-          <Badge color="blue" variant="dark" mb={15}>
-            {section}
-          </Badge>
+          {section && (
+            <Badge color="blue" variant="dark" mb={15}>
+              {section}
+            </Badge>
+          )}
           <Title order={2} mb={15}>
             {title}
           </Title>

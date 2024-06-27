@@ -1,5 +1,6 @@
 .container {
   display: grid;
+  margin-bottom: rem(40px);
 
   @media (min-width: $mantine-breakpoint-md) {
     grid-template-columns: 1fr 1fr;

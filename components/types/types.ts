@@ -50,7 +50,6 @@ export interface DataResponse {
 }
 
 export type SearchBarProps = {
-  keywords: string[];
-  setKeywords: React.Dispatch<React.SetStateAction<string>>;
-  refetch: () => void;
+  refetch: (searchKeywords: string) => Promise<void>;
+  loading: React.Dispatch<React.SetStateAction<boolean>>;
 };

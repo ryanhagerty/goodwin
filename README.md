@@ -12,6 +12,13 @@ If I went forward with this: I'd create Storybook stories for the components, ab
 
 Let me know what you think, and thanks for checking it out.
 
+# NOTE: You need a NYTimes API Key!
+This will not work without a NYTimes API key. It takes about 30 seconds to sign up here: https://developer.nytimes.com/apis and make sure to enable the 'Article Search API'.
+
+Once you have this key, put it in a `.env.local` file as `NEXT_PUBLIC_NYTIMES_API_KEY=XXX`. Since
+this is just a demo/exercise, the key will be exposed on the client side. There are
+many sane and secure solutions to not expose this key, but let's march on for the sake of a demo.
+
 ## npm scripts
 - `dev` – start dev server
 - `build` – bundle application for production

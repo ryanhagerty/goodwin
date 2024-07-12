@@ -14,18 +14,17 @@ export const NewsContainer: React.FC = () => {
   const fetchArticles = async (keywords: string) => {
     try {
       /* Yikes! An exposed API key! Since this is an exercise, I'm living
-       * that cowboy life. In reality, we could call this on the BE so the FE
-       * could consume the data, create a proxy call with Express or
-       * any number of sane/secure solutions.
+       * that cowboy life. In reality, Next.js offers many solutions to this
+       * along with other secure options such as SSR, an Express proxy, etc.
        */
       const response = await fetch(
-        `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${keywords}&api-key=WLUy700lQIYfGuDVZ54OtsAcWSNAnPfm`
+        `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${keywords}&api-key=${process.env.NEXT_PUBLIC_NYTIMES_API_KEY}`
       );
       const data = await response.json();
       setArticles(data.response.docs);
-      setLoading(false);
     } catch (error) {
       setError(true);
+    } finally {
       setLoading(false);
     }
   };

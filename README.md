@@ -12,7 +12,16 @@ If I went forward with this: I'd create Storybook stories for the components, ab
 
 Let me know what you think, and thanks for checking it out.
 
-# NOTE: You need a NYTimes API Key!
+### Criteria
+* Must use NYTimes API to display a list of items (travel and aviation related)
+* Each item must show a preview of content
+* When clicking on an item, it should show additional information
+* Must use Next.js
+* Must have unit tests
+* Opitional: have a search bar where users can look up new search terms and the items update to reflect those terms.
+* You can use any component library, but we use [mantine.dev](https://www.mantine.dev/)
+
+## NOTE: You need a NYTimes API Key!
 This will not work without a NYTimes API key. It takes about 30 seconds to sign up here: https://developer.nytimes.com/apis and make sure to enable the 'Article Search API'.
 
 Once you have this key, put it in a `.env.local` file as `NEXT_PUBLIC_NYTIMES_API_KEY=XXX`. Since
